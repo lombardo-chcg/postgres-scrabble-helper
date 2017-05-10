@@ -12,7 +12,13 @@ git clone https://github.com/lombardo-chcg/postgres-scrabble-helper.git
 cd postgres-scrabble-helper
 ```
 
-## Example Usage
+## Build and run
+```
+docker build -t postgres-scrabble-helper .
+docker run -p 5431:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=scrabble_helper postgres-scrabble-helper
+```
+
+## Example Usage with Docker Compose
 ```
 docker-compose up
 
@@ -27,9 +33,9 @@ select * from words where canonical_word='abbcelrs';
 # --------+----------+----------------+--------+----------------------------
 #   27273 | clabbers | abbcelrs       |     14 | 2017-05-10 00:07:24.593537
 #  139275 | scrabble | abbcelrs       |     14 | 2017-05-10 00:07:24.593537
+
+\q
 ```
 
-## Build a Docker Image
-```
-docker build -t postgres-scrabble-helper .
-```
+## Don't Forget
+When you're done run `docker-compose down` to remove the network and container

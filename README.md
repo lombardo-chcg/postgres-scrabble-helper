@@ -15,7 +15,7 @@ cd postgres-scrabble-helper
 ## Build and run
 ```
 docker build -t postgres-scrabble-helper .
-docker run -p 5431:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=scrabble_helper postgres-scrabble-helper
+docker run -name postgres-scrabble-helper -p 5431:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=scrabble_helper postgres-scrabble-helper
 ```
 
 ## Example Usage with Docker Compose

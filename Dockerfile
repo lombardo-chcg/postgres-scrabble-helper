@@ -6,5 +6,6 @@ ADD sql/seed_words_table.sql /docker-entrypoint-initdb.d/02_seed_words_table.sql
 ADD sql/create_greetings_table.sql /docker-entrypoint-initdb.d/03_create_greetings_table.sql
 ADD sql/seed_greetings_table.sql /docker-entrypoint-initdb.d/04_seed_greetings_table.sql
 ADD sql/create_words_table_index.sql /docker-entrypoint-initdb.d/05_create_words_table_index.sql
+ADD sql/create_logs_table.sql /docker-entrypoint-initdb.d/06_create_logs_table.sql
 
 EXPOSE 5342
